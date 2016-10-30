@@ -2,7 +2,11 @@
 -- documentation, see http://haskell.org/cabal/users-guide/
 
 name:                monadiclasses
-version:             1.0.0.0
+
+-- PVP summary:      +-+------- breaking API changes
+--                   | | +----- non-breaking API additions
+--                   | | | +--- code changes with no API change
+version:             1.0.1.0
 synopsis:            All of monadic type classes.
 -- description:         
 homepage:            https://github.com/Hexirp/monadiclasses
@@ -13,11 +17,11 @@ maintainer:          Hexirp <Hexirp@users.noreply.github.com>
 -- copyright:           
 category:            Structure
 build-type:          Simple
-extra-source-files:  README.md, README-classmap.png, LICENSE
+extra-source-files:  README.md, LICENSE
 cabal-version:       >=1.10
 
 library
-  exposed-modules:     Structure.Monadiclasses.Test, Structure.Monadiclasses
+  exposed-modules:     Structure.Monadiclasses, Structure.Monadiclasses.Functor, Structure.Monadiclasses.Wrapper, Structure.Monadiclasses.Conquer
   -- other-modules:       
   other-extensions:    NoImplicitPrelude
   build-depends:       base >=4.8 && <4.9, QuickCheck >=2.8 && <2.9

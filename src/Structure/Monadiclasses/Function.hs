@@ -19,3 +19,6 @@ module Structure.Monadiclasses.Function where
     infixr 9 .
     (.) :: (a -> b) -> (c -> a) -> c -> b
     (.) = \f -> \g -> \x -> f (g x)
+
+    copy :: (a -> a -> b) -> a -> b
+    copy = \f -> \a -> f a a
