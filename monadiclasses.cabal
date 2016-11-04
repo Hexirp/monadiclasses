@@ -6,7 +6,7 @@ name:                monadiclasses
 -- PVP summary:      +-+------- breaking API changes
 --                   | | +----- non-breaking API additions
 --                   | | | +--- code changes with no API change
-version:             1.0.1.0
+version:             1.0.2.0
 synopsis:            All of monadic type classes.
 -- description:         
 homepage:            https://github.com/Hexirp/monadiclasses

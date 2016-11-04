@@ -76,7 +76,7 @@ __My English level ability isn't native level, so I write this commentary in Jap
 
 Conquerの名前は[Hackage: contravariant-1.4][1]に基づいています。Unquerはそれにあたる名前が分からなかったので、unとconquerを合わせて作成しました。
 
-ちなみに、これらの型クラスに含まれる関数群はそのままでは対称性が見えませんが、冗長な型を持つ版では対称性が見えます。
+ちなみに、これらの型クラスに含まれる関数群はそのままでは対称性が見えませんが、冗長な型を持つ版では対称性が現れます。
 
 ```haskell
     wrap'    :: (() -> a) -> f a
@@ -92,14 +92,40 @@ Conquerの名前は[Hackage: contravariant-1.4][1]に基づいています。Unq
     a -> () === ()
 ```
 
+Unquerは意味がありませんが、対称性の関係から実装しています。
+
 ####　Identity, Contity
 
 WrapperとUnwrapperを合わせたのがIdentity、ConquerとUnquerを合わせたのがContityです。Contityはそれにあたる名前が分からなかったので、conquerとidentityを合わせて作成しました。
 
+### Monad
+
+このパッケージはMonadに近い位置にある型クラスを含みます。これらの大きな特徴はApplicativeとMonadから「関数の適用」を実装する部分が分離されていることです。
+
+### Comonad
+
+このパッケージはComonadに近い位置にある型クラスを含みます。Monadモジュールと同様の分割をしました。
+
+### Divide
+
+このパッケージはDivideに近い位置にある型クラスを含みます。`divide :: (And and) => (and a b -> c) -> (c -> and a b)`はApplyの`cift2`と対です。この名前は[Hackage: contravariant-1.4][1]に基づいており、第二引数が二つの値に分けられて返される様子から名付けられたそうです。また、この型クラス群は[scalaz][2]にも基づいています。また、`conquer`の名前は分割統治法(Divide-and-Conquer method)に由来しているそうです。
+
+### Codivide
+
+このパッケージはCodivideに近い位置にある型クラスを含みます。`codivide`はCoapplyの`cict2`と対です。
 
 ## Version
 
 更新履歴をここに記載します。
+
+### 1.0.2.0
+
+このバージョンはMonadとComonadとDivideとCodivideが追加されたバージョンです。
+
+* Added - Monad
+* Added - Comonad
+* Added - Divide
+* Added - Codivide
 
 ### 1.0.1.0
 
@@ -125,3 +151,4 @@ WrapperとUnwrapperを合わせたのがIdentity、ConquerとUnquerを合わせ�
 
 
 [1]:https://hackage.haskell.org/package/contravariant-1.4
+[2]:https://github.com/scalaz/scalaz
