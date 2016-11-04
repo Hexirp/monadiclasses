@@ -1,6 +1,6 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 
-module Structure.Monadiclasses.Codivide (
+module Structure.Monadiclasses.Contravariant.Codivide (
     Codivide(..),
     Untrapointed(..),
     Codivisible(..)

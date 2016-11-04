@@ -118,32 +118,18 @@ WrapperとUnwrapperを合わせたのがIdentity、ConquerとUnquerを合わせ�
 
 更新履歴をここに記載します。
 
-### 1.0.2.0
-
-このバージョンはMonadとComonadとDivideとCodivideが追加されたバージョンです。
-
-* Added - Monad
-* Added - Comonad
-* Added - Divide
-* Added - Codivide
-
-### 1.0.1.0
-
-このバージョンはFunctor関係にさらに関数が追加されたバージョンです。
-
-* Added - `xmap`、`phantom`をFunctorモジュールに追加
-* Added - 型クラスの解説
-
 ### 1.0.0.0
 
 このバージョンは最初にコンパイルが成功したバージョンです。
 
-* Added - ライセンス(BSD-3)ファイル
-* Added - ソースコード
-  - Added - Functor、Wrapper、Conquerに関する型クラス
-  - Added - 汎用の関数群
-  - Added - ユニット型クラス
-  - Added - テストコードのひな形
+* Add - ライセンス(BSD-3)ファイル
+* Add - READMEの型クラスの解説
+* Add - ソースコード
+    * Add - Functor、Wrapper、Conquer
+    * Add - Monad、Comonad、Divide、Codivideに関する型クラス
+    * Add - 汎用の関数群
+    * Add - `()`、`(,)`、`Either`を抽象化した型クラス
+    * Add - テストコードのひな形
 
 ### 0.0.0.0
 

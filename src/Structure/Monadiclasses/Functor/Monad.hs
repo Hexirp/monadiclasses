@@ -1,6 +1,6 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 
-module Structure.Monadiclasses.Monad (
+module Structure.Monadiclasses.Functor.Monad (
     Apply(..),
     Pointed(..),
     Bind(..),

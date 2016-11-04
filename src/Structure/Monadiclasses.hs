@@ -4,15 +4,15 @@ module Structure.Monadiclasses (
     module Structure.Monadiclasses.Functor,
     module Structure.Monadiclasses.Wrapper,
     module Structure.Monadiclasses.Conquer,
-    module Structure.Monadiclasses.Monad,
-    module Structure.Monadiclasses.Comonad,
-    module Structure.Monadiclasses.Divide,
-    module Structure.Monadiclasses.Codivide
+    module Structure.Monadiclasses.Functor.Monad,
+    module Structure.Monadiclasses.Functor.Comonad,
+    module Structure.Monadiclasses.Contravariant.Divide,
+    module Structure.Monadiclasses.Contravariant.Codivide
 ) where
     import Structure.Monadiclasses.Functor
     import Structure.Monadiclasses.Wrapper
     import Structure.Monadiclasses.Conquer
-    import Structure.Monadiclasses.Monad
-    import Structure.Monadiclasses.Comonad
-    import Structure.Monadiclasses.Divide
-    import Structure.Monadiclasses.Codivide
+    import Structure.Monadiclasses.Functor.Monad
+    import Structure.Monadiclasses.Functor.Comonad
+    import Structure.Monadiclasses.Contravariant.Divide
+    import Structure.Monadiclasses.Contravariant.Codivide

@@ -1,6 +1,6 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 
-module Structure.Monadiclasses.Divide (
+module Structure.Monadiclasses.Contravariant.Divide (
     Divide(..),
     Contrapointed(..),
     Divisible(..)

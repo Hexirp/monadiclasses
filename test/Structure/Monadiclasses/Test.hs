@@ -1,12 +1,12 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 
 module Structure.Monadiclasses.Test where
-    import Prelude
+    import qualified Prelude as Pre
     import Test.QuickCheck
     import Structure.Monadiclasses
 
-    iden :: (Eq a) => a -> Bool
-    iden a = a == a
+    iden :: (Pre.Eq a) => a -> Pre.Bool
+    iden a = a Pre.== a
 
-    test :: IO ()
-    test = quickCheck (iden :: Int -> Bool)
+    test :: Pre.IO ()
+    test = quickCheck (iden :: Pre.Int -> Pre.Bool)

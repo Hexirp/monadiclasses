@@ -1,6 +1,6 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 
-module Structure.Monadiclasses.Comonad (
+module Structure.Monadiclasses.Functor.Comonad (
     Coapply(..),
     Copointed(..),
     Extend(..),
