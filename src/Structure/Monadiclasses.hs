@@ -1,6 +1,8 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 
 module Structure.Monadiclasses (
+    module Structure.Monadiclasses.Function,
+    module Structure.Monadiclasses.Unit,
     module Structure.Monadiclasses.Functor,
     module Structure.Monadiclasses.Wrapper,
     module Structure.Monadiclasses.Conquer,
@@ -9,6 +11,8 @@ module Structure.Monadiclasses (
     module Structure.Monadiclasses.Contravariant.Divide,
     module Structure.Monadiclasses.Contravariant.Codivide
 ) where
+    import Structure.Monadiclasses.Function
+    import Structure.Monadiclasses.Unit
     import Structure.Monadiclasses.Functor
     import Structure.Monadiclasses.Wrapper
     import Structure.Monadiclasses.Conquer

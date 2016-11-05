@@ -92,11 +92,11 @@ Conquerの名前は[Hackage: contravariant-1.4][1]に基づいています。Unq
     a -> () === ()
 ```
 
-Unquerは意味がありませんが、対称性の関係から実装しています。
+Unquerは全ての型がなることが出来るため、意味がありませんが、対称性の関係から実装しています。
 
-####　Identity, Contity
+#### Identity, Contity
 
-WrapperとUnwrapperを合わせたのがIdentity、ConquerとUnquerを合わせたのがContityです。Contityはそれにあたる名前が分からなかったので、conquerとidentityを合わせて作成しました。
+WrapperとUnwrapperを合わせたのがIdentity、ConquerとUnquerを合わせたのがContityです。Contityはそれにあたる名前が分からなかったので、conquerとidentityを合わせて作成しました。ContityはConquerと同じですが、対称性の関係から実装しています。
 
 ### Monad
 
@@ -112,7 +112,7 @@ WrapperとUnwrapperを合わせたのがIdentity、ConquerとUnquerを合わせ�
 
 ### Codivide
 
-このパッケージはCodivideに近い位置にある型クラスを含みます。`codivide`はCoapplyの`cict2`と対です。
+このパッケージはCodivideに近い位置にある型クラスを含みます。`codivide`はCoapplyの`cict2`と対です。UntrapointedはContravariantと同じですが、対称性の関係から実装しています。
 
 ## Version
 

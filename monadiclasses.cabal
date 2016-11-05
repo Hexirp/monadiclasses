@@ -21,9 +21,9 @@ extra-source-files:  README.md, LICENSE
 cabal-version:       >=1.10
 
 library
-  exposed-modules:     Structure.Monadiclasses, Structure.Monadiclasses.Test
+  exposed-modules:     Structure.Monadiclasses, Structure.Monadiclasses.Minimal
   -- other-modules:       
   other-extensions:    NoImplicitPrelude
-  build-depends:       base >=4.8 && <4.9, QuickCheck >=2.8 && <2.9
-  hs-source-dirs:      src, test
+  build-depends:       base >= 4.8
+  hs-source-dirs:      src, mini
   default-language:    Haskell2010
