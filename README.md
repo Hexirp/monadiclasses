@@ -114,6 +114,11 @@ WrapperとUnwrapperを合わせたのがIdentity、ConquerとUnquerを合わせ�
 
 このパッケージはCodivideに近い位置にある型クラスを含みます。`codivide`はCoapplyの`cict2`と対です。UntrapointedはContravariantと同じですが、対称性の関係から実装しています。
 
+### Minimal
+
+これらのクラスは最小のコード量での型クラス定義を提供します。たとえば、Minimalを使用しないと、Monadを使用するために__6個__もの型クラスとたくさんの関数を実装する必要があります。しかし、使えばたった2個、または3個の関数を実装するだけで済みます。
+
+
 ## Version
 
 更新履歴をここに記載します。
