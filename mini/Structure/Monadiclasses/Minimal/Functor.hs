@@ -1,11 +1,5 @@
-{-# LANGUAGE 
-    NoImplicitPrelude, 
-    FlexibleInstances, 
-    UndecidableInstances, 
-    IncoherentInstances 
-#-}
+{-# LANGUAGE NoImplicitPrelude, FlexibleInstances, UndecidableInstances, IncoherentInstances #-}
 
--- | このパッケージは最小のコード量での型クラス定義を提供します。
 module Structure.Monadiclasses.Minimal.Functor where
     import Structure.Monadiclasses.Wrapper
     import Structure.Monadiclasses.Functor
@@ -113,6 +107,6 @@ module Structure.Monadiclasses.Minimal.Functor where
     instance (M_Comonad f) => Comonad f where 
         --
 
-    -- | M_ApplicativeでありM_Comonadでもある型が存在する時、M_Applicativeの方の定義を優先します。
+    -- | M_ApplicativeでありM_Comonadでもある型が存在する時、M_Applicativeの方の定義を優先する。
     instance (M_Applicative f, M_Comonad f) => M_Functor f where
         f_fmap = a_fmap
