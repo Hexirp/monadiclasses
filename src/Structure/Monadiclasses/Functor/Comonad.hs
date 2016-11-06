@@ -13,15 +13,15 @@ module Structure.Monadiclasses.Functor.Comonad (
     import Structure.Monadiclasses.Functor
 
     class (Functor f) => Coapply f where
-        cict2 :: (Or or) => (or a b -> c) -> or (f a) (f b) -> f c
+        cict2 :: (Or t0, Or t1) => (t0 a b -> c) -> t1 (f a) (f b) -> f c
         cict2 = undefined
 
     class (Coapply f) => Extend f where
         extend :: (f a -> b) -> (f a -> f b)
-        extend f = fmap f . extract
+        extend f = fmap f . duplicate
 
-        extract :: f a -> f (f a)
-        extract = extend id
+        duplicate :: f a -> f (f a)
+        duplicate = extend id
 
     class (Unwrapper f, Functor f) => Copointed f where
         --

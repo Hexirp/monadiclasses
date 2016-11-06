@@ -32,21 +32,21 @@ module Structure.Monadiclasses.Minimal.Functor where
     instance (M_Applicative f) => M_Functor f where
         f_fmap = a_fmap
 
-    instance (M_Applicative f) => Apply f where
-        fapp = a_fapp
-
     instance (M_Applicative f) => Wrapper f where
         wrap = a_pure
 
     instance (M_Applicative f) => Pointed f where
         --
 
+    instance (M_Applicative f) => Apply f where
+        fapp = a_fapp
+
     instance (M_Applicative f) => Applicative f where
         --
 
     class M_Monad f where
         m_fmap :: (a -> b) -> f a -> f b
-        m_fmap f x = m_bind (m_return . f) x
+        m_fmap f = m_bind $ m_return . f
 
         m_join :: f (f a) -> f a
         m_join = m_bind id
@@ -61,6 +61,8 @@ module Structure.Monadiclasses.Minimal.Functor where
         a_fapp f = m_bind $ f0 f -- :: f (a -> b) -> f a -> f b
             where 
                 f0 f x = m_fmap ($ x) f -- :: f (a -> b) -> a -> f b
+
+        a_pure = m_return
 
     instance (M_Monad f) => Bind f where
         bind = m_bind

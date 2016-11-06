@@ -11,7 +11,7 @@ module Structure.Monadiclasses.Contravariant.Divide (
     import Structure.Monadiclasses.Functor
 
     class (Contravariant f) => Divide f where
-        divide :: (And and) => (and a b -> c) -> (f c -> and (f a) (f b))
+        divide :: (And t0, And t1) => (t0 a b -> c) -> (f c -> t1 (f a) (f b))
         divide = undefined
 
     class (Conquer f, Contravariant f) => Contrapointed f where

@@ -36,6 +36,9 @@ module Structure.Monadiclasses.Unit where
     uncurry :: (And t) => (a -> b -> c) -> t a b -> c
     uncurry f x = f (first x) (second x)
 
+    parallel :: (And t) => (a -> b) -> (c -> d) -> t a c -> t b d
+    parallel f g = foesac (f . first) (g . second)
+
     instance Swap (,) where
         swap (a, b) = (b, a)
 
@@ -54,6 +57,12 @@ module Structure.Monadiclasses.Unit where
 
         right :: a -> or b a
         right = swap . left
+
+    yrruc :: (Or or, And and) => (or a b -> c) -> and (a -> c) (b -> c)
+    yrruc f = product (f . left) (f . right)
+
+    yrrucnu :: (Or or, And and) => and (a -> c) (b -> c) -> (or a b -> c)
+    yrrucnu = uncurry caseof
 
     data Either a b = Left a | Right b
 
