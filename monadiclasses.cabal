@@ -21,7 +21,7 @@ extra-source-files:  README.md, LICENSE
 cabal-version:       >=1.10
 
 library
-  exposed-modules:     Structure.Monadiclasses, Structure.Monadiclasses.Minimal
+  exposed-modules:     Structure.Monadiclasses.Function, Structure.Monadiclasses.Unit, Structure.Monadiclasses.Wrapper, Structure.Monadiclasses.Conquer, Structure.Monadiclasses.Functor, Structure.Monadiclasses.Functor.Monad, Structure.Monadiclasses.Functor.Comonad, Structure.Monadiclasses.Contravariant.Divide, Structure.Monadiclasses.Contravariant.Codivide, Structure.Monadiclasses.Semigroupoid, Structure.Monadiclasses, Structure.Monadiclasses.Minimal.Functor, Structure.Monadiclasses.Minimal
   -- other-modules:       
   other-extensions:    NoImplicitPrelude
   build-depends:       base >= 4.8

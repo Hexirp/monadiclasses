@@ -45,7 +45,11 @@ Description
 
 #### Functor
 
-皆さんはもう知っていると思いますので、解説しません。
+皆さんはもう知っていると思いますが、Functorは中身の値、または生み出す値に適用する事が出来る型の抽象化です。法則はInvariantがこのパッケージに含まれることにより、単純にすることが出来ます。
+
+```haskell
+    fmap f === xmap f undefined
+```
 
 #### Contravariant
 
@@ -54,7 +58,7 @@ Description
     contra (f . g) === contra g . contra f
 ```
 
-これはFunctorと対となる型クラスです。名前は「反変」を意味します。これになることが出来る型は、関数型が絡んでいるもののみです。下はインスタンスとなる型の例です。
+これはFunctorと対となる型クラスです。名前は「反変」を意味します。下はインスタンスとなる型の例です。
 
 ```haskell
     data Test a = Test (a -> Bool)
@@ -111,11 +115,11 @@ WrapperとUnwrapperを合わせたのがIdentity、ConquerとUnquerを合わせ�
 
 ### Comonad
 
-このパッケージはComonadに近い位置にある型クラスを含みます。Monadモジュールと同様の分割をしました。
+このパッケージはComonadに近い位置にある型クラスを含みます。Monadモジュールと同様の分割が適用されています。
 
 ### Divide
 
-このパッケージはDivideに近い位置にある型クラスを含みます。`divide :: (And and) => (and a b -> c) -> (c -> and a b)`はApplyの`cift2`と対です。この名前は[Hackage: contravariant-1.4][1]に基づいており、第二引数が二つの値に分けられて返される様子から名付けられたそうです。また、この型クラス群は[scalaz][2]にも基づいています。また、`conquer`の名前は分割統治法(Divide-and-Conquer method)に由来しているそうです。
+このパッケージはDivideに近い位置にある型クラスを含みます。`divide :: (And and) => (and a b -> c) -> (c -> and a b)`はApplyの`cift2`と対です。この名前は[Hackage: contravariant-1.4][1]に基づいており、第二引数が二つの値に分けられて返される様子に由来しており、`conquer`の名前は分割統治法(Divide-and-Conquer method)に由来しているそうです。また、この型クラス群は[scalaz][2]にも基づいています。
 
 ### Codivide
 
@@ -123,7 +127,7 @@ WrapperとUnwrapperを合わせたのがIdentity、ConquerとUnquerを合わせ�
 
 ### Minimal
 
-これらのクラスは最小のコード量での型クラス定義を提供します。たとえば、Minimalを使用しないと、Monadを使用するために__7個__もの型クラスとたくさんの関数を実装する必要があります。しかし、使えばたった2個、または3個の関数を実装するだけで済みます。
+これらのクラスは最小のコード量での型クラス定義を提供します。たとえば、Minimalを使用しないと、Monadを使用するために__7個__もの型クラスとたくさんの関数を実装する必要があります。しかし、使えば2個、または3個の関数を実装するだけで済みます。
 
 
 Version
@@ -136,13 +140,16 @@ Version
 このバージョンは最初にコンパイルが成功したバージョンです。
 
 * Add - ライセンス(BSD-3)ファイル
-* Add - READMEの型クラスの解説
+* Add - README.md
+* Add - cabalファイル
+* Add - stackファイル
 * Add - ソースコード
     * Add - Functor、Wrapper、Conquerに関する型クラス
     * Add - Monad、Comonad、Divide、Codivideに関する型クラス
     * Add - 汎用の関数群
     * Add - `()`、`(,)`、`Either`を抽象化した型クラス
     * Add - Minimal
+* Add - 継承関係を表すprologソースコード
 
 ### 0.0.0.0
 

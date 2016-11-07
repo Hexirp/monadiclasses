@@ -9,7 +9,8 @@ module Structure.Monadiclasses (
     module Structure.Monadiclasses.Functor.Monad,
     module Structure.Monadiclasses.Functor.Comonad,
     module Structure.Monadiclasses.Contravariant.Divide,
-    module Structure.Monadiclasses.Contravariant.Codivide
+    module Structure.Monadiclasses.Contravariant.Codivide,
+    module Structure.Monadiclasses.Semigroupoid
 ) where
     import Structure.Monadiclasses.Function
     import Structure.Monadiclasses.Unit
@@ -20,3 +21,4 @@ module Structure.Monadiclasses (
     import Structure.Monadiclasses.Functor.Comonad
     import Structure.Monadiclasses.Contravariant.Divide
     import Structure.Monadiclasses.Contravariant.Codivide
+    import Structure.Monadiclasses.Semigroupoid
