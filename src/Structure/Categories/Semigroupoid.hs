@@ -1,6 +1,6 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 
-module Structure.Monadiclasses.Semigroupoid (
+module Structure.Categories.Semigroupoid (
     Semigroupoid(..)
 ) where
     import Structure.Monadiclasses.Function
