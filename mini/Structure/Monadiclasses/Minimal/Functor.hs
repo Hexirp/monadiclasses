@@ -1,10 +1,9 @@
-{-# LANGUAGE NoImplicitPrelude, FlexibleInstances, UndecidableInstances, IncoherentInstances #-}
+{-# LANGUAGE NoImplicitPrelude, FlexibleInstances, UndecidableInstances #-}
 
 module Structure.Monadiclasses.Minimal.Functor where
     import Structure.Monadiclasses.Wrapper
     import Structure.Monadiclasses.Functor
     import Structure.Monadiclasses.Functor.Monad
-    import Structure.Monadiclasses.Functor.Comonad
     import Structure.Monadiclasses.Function
 
     class M_Functor f where
@@ -70,43 +69,3 @@ module Structure.Monadiclasses.Minimal.Functor where
 
     instance (M_Monad f) => Monad f where
         --
-
-    class M_Comonad f where
-        c_fmap :: (a -> b) -> f a -> f b
-        c_fmap f x = c_extend $ f . c_extract
-
-        c_duplicate :: f a -> f (f a)
-        c_duplicate = c_extend id
-
-        c_extend :: (f a -> b) -> f a -> f b
-        c_extend f = c_fmap f . c_duplicate
-
-        c_extract :: f a -> a
-        c_extract = undefined
-
-    instance (M_Comonad f) => M_Functor f where
-        f_fmap = c_fmap
-
-    instance (M_Comonad f) => Unwrapper f where
-        unwrap = c_extract
-
-    instance (M_Comonad f) => Copointed f where
-        --
-
-    instance (M_Comonad f) => Coapply f where
-        cict2 = yrrucnu . f0 . yrruc -- :: (Or t0, Or t1) => (t0 a b -> c) -> t1 (f a) (f b) -> f c
-            where
-                f0 = uncrry $ parallel c_fmap c_fmap -- :: (And t0, And t1) => t0 (a -> c) (b -> c) -> t1 (f a -> f c) (f b -> f c)
-
-    instance (M_Comonad f) => Extract f where
-        --
-
-    instance (M_Comonad f) => Extend f where
-        extend = c_extend
-
-    instance (M_Comonad f) => Comonad f where 
-        --
-
-    -- | M_ApplicativeでありM_Comonadでもある型が存在する時、M_Applicativeの方の定義を優先する。
-    instance (M_Applicative f, M_Comonad f) => M_Functor f where
-        f_fmap = a_fmap
