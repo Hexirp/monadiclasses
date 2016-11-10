@@ -6,7 +6,7 @@ module Structure.Monadiclasses.Functor (
     Contravariant(..),
     Nonvariant(..)
 ) where 
-    import Structure.Monadiclasses.Function
+    import Structure.Function
 
     class Invariant f where
         invar :: (a -> a) -> (f a -> f a)

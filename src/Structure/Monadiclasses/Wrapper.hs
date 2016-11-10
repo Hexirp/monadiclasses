@@ -5,8 +5,8 @@ module Structure.Monadiclasses.Wrapper (
     Unwrapper(..),
     Identity(..)
 ) where
-    import Structure.Monadiclasses.Function
-    import Structure.Monadiclasses.Unit
+    import Structure.Function
+    import Structure.Unit
 
     class Wrapper f where
         wrap :: a -> f a

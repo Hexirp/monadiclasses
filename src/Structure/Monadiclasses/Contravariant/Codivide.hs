@@ -5,8 +5,8 @@ module Structure.Monadiclasses.Contravariant.Codivide (
     Untrapointed(..),
     Codivisible(..)
 ) where
-    import Structure.Monadiclasses.Function
-    import Structure.Monadiclasses.Unit
+    import Structure.Function
+    import Structure.Unit
     import Structure.Monadiclasses.Conquer
     import Structure.Monadiclasses.Functor
 

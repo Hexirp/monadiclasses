@@ -5,8 +5,8 @@ module Structure.Monadiclasses.Conquer (
     Unquer(..),
     Contity(..)
 ) where
-    import Structure.Monadiclasses.Function
-    import Structure.Monadiclasses.Unit
+    import Structure.Function
+    import Structure.Unit
 
     class Conquer f where
         conquer :: f a

@@ -94,6 +94,8 @@ ex(codivide, codivisible).
 
 /* ソースコードに含まれない関係 */
 
+co(invariant, invariant).
+
 co(functor, functor).
 co(wrapper, unwrapper).
 co(apply, coapply).
@@ -108,6 +110,7 @@ co(divide, codivide).
 co(contrapointed, untrapointed).
 co(divisible, codivisible).
 
+contra(invariant, invariant).
 contra(functor, contravariant).
 
 contra(wrapper, conquer).
@@ -153,7 +156,3 @@ diamond3(W, A, X, Y, Z, B) :- diamond(W,A,X,Y,B),diamond(W,A,Y,Z,B), X \= Z.
 radder2(X, A, A_, B, B_, C, C_) :- diamond(X,A,A_,B,B_), diamond(X,B,B_,C,C_), A \= C, A \= C_, A_ \= C, A_ \= C_.
 
 radder3(X,A,A_,B,B_,C,C_,D,D_) :- radder2(X,A,A_,B,B_,C,C_), radder2(X,B,B_,C,C_,D,D_), A \= D, A \= D_, A_ \= D, A_ \= D_.
-
-/* 対になっているか調べる。 */
-
-pair(A,B) :- bind(co,A,B); bind(ct,A,B).

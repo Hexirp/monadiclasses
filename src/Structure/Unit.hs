@@ -1,7 +1,7 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 
-module Structure.Monadiclasses.Unit where
-    import Structure.Monadiclasses.Function
+module Structure.Unit where
+    import Structure.Function
 
     -- | ()を抽象化した型クラス
     class Unit t where

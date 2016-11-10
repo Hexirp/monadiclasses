@@ -5,8 +5,8 @@ module Structure.Monadiclasses.Contravariant.Divide (
     Contrapointed(..),
     Divisible(..)
 ) where
-    import Structure.Monadiclasses.Function
-    import Structure.Monadiclasses.Unit
+    import Structure.Function
+    import Structure.Unit
     import Structure.Monadiclasses.Conquer
     import Structure.Monadiclasses.Functor
 

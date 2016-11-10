@@ -7,8 +7,8 @@ module Structure.Monadiclasses.Functor.Comonad (
     Extract(..),
     Comonad(..)
 ) where
-    import Structure.Monadiclasses.Function
-    import Structure.Monadiclasses.Unit
+    import Structure.Function
+    import Structure.Unit
     import Structure.Monadiclasses.Wrapper
     import Structure.Monadiclasses.Functor
 

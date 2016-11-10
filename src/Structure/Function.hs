@@ -1,6 +1,6 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 
-module Structure.Monadiclasses.Function where
+module Structure.Function where
     import qualified GHC.Err as Err (undefined)
 
     undefined :: a

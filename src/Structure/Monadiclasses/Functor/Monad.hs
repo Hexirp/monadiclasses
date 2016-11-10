@@ -7,8 +7,8 @@ module Structure.Monadiclasses.Functor.Monad (
     Applicative(..),
     Monad(..)
 ) where
-    import Structure.Monadiclasses.Function
-    import Structure.Monadiclasses.Unit
+    import Structure.Function
+    import Structure.Unit
     import Structure.Monadiclasses.Wrapper
     import Structure.Monadiclasses.Functor
 

@@ -4,7 +4,7 @@ module Structure.Monadiclasses.Minimal.Functor where
     import Structure.Monadiclasses.Wrapper
     import Structure.Monadiclasses.Functor
     import Structure.Monadiclasses.Functor.Monad
-    import Structure.Monadiclasses.Function
+    import Structure.Function
 
     class M_Functor f where
         f_fmap :: (a -> b) -> f a -> f b
