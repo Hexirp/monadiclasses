@@ -117,6 +117,13 @@ WrapperとUnwrapperを合わせたのがIdentity、ConquerとUnquerを合わせ�
 
 このパッケージはDivideに近い位置にある型クラスを含みます。`divide :: (And and) => (and a b -> c) -> (c -> and a b)`はApplyの`cift2`と対です。この名前は[Hackage: contravariant-1.4][1]に基づいており、第二引数が二つの値に分けられて返される様子から名付けられたそうです。また、この型クラス群は[scalaz][2]にも基づいています。また、`conquer`の名前は分割統治法(Divide-and-Conquer method)に由来しているそうです。
 
+Divisible則(contravariant-1.4から引用):
+```haskell
+    divide delta m conquer = m
+    divide delta conquer m = m
+    divide delta (divide delta m n) o = divide delta m (divide delta n o)
+```
+
 ### Codivide
 
 このパッケージはCodivideに近い位置にある型クラスを含みます。`codivide`はCoapplyの`cict2`と対です。UntrapointedはContravariantと同じですが、対称性の関係から実装しています。
