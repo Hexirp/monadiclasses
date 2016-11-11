@@ -92,8 +92,13 @@ ex(contravariant, codivide).
 ex(untrapointed, codivisible).
 ex(codivide, codivisible).
 
+/* Semigroupoid */
+
+ex(dutype, semigroupoid).
+
 /* ソースコードに含まれない関係 */
 
+/* 圏論における余の関係 */
 co(invariant, invariant).
 
 co(functor, functor).
@@ -110,6 +115,7 @@ co(divide, codivide).
 co(contrapointed, untrapointed).
 co(divisible, codivisible).
 
+/* 圏論における反変の関係 */
 contra(invariant, invariant).
 contra(functor, contravariant).
 
@@ -122,6 +128,12 @@ contra(unwrapper, unquer).
 contra(coapply, codivide).
 contra(copointed, untrapointed).
 contra(extract, codivisible).
+
+/* 同値関係 */
+eq(unitype, unquer).
+eq(conquer, contity).
+eq(contravariant, untrapointed).
+eq(codivide, codivisible).
 
 /* contact - Yから二項関係をたどってZに到達出来るかどうか調べる */
 contact(X, Y, Z) :- call(X,Y,Z);

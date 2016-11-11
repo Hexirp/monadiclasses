@@ -21,7 +21,7 @@ extra-source-files:  README.md, LICENSE
 cabal-version:       >=1.10
 
 library
-  exposed-modules:     Structure.Unit, Structure.Function, 
+  exposed-modules:     Structure.Unit, Structure.Commutative, Structure.Function, 
                        Structure.Monadiclasses.Wrapper, Structure.Monadiclasses.Conquer, 
                        Structure.Monadiclasses.Functor, Structure.Monadiclasses.Functor.Monad, Structure.Monadiclasses.Functor.Comonad, 
                        Structure.Monadiclasses.Contravariant.Divide, Structure.Monadiclasses.Contravariant.Codivide, 

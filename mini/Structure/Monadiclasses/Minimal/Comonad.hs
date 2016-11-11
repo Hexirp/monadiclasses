@@ -4,8 +4,8 @@ module Structure.Monadiclasses.Minimal.Comonad where
     import Structure.Monadiclasses.Functor
     import Structure.Monadiclasses.Wrapper
     import Structure.Monadiclasses.Functor.Comonad
-    import Structure.Monadiclasses.Function
-    import Structure.Monadiclasses.Unit
+    import Structure.Function
+    import Structure.Commutative
 
     class M_Comonad f where
         c_fmap :: (a -> b) -> f a -> f b
@@ -33,7 +33,7 @@ module Structure.Monadiclasses.Minimal.Comonad where
         --
 
     instance (M_Comonad f) => Coapply f where
-        cict2 = (yrrucnu :: (Or or) => (a -> c, b -> c) -> (or a b -> c)) . f0 . (yrruc :: (Or or) => (or a b -> c) -> (a -> c, b -> c)) -- :: (Or t0, Or t1) => (t0 a b -> c) -> t1 (f a) (f b) -> f c
+        cict2 = (yrrucnu :: (Disum or) => (a -> c, b -> c) -> (or a b -> c)) . f0 . (yrruc :: (Disum or) => (or a b -> c) -> (a -> c, b -> c)) -- :: (Or t0, Or t1) => (t0 a b -> c) -> t1 (f a) (f b) -> f c
             where
                 f0 = parallel c_fmap c_fmap -- :: (a -> c, b -> c) -> (f a -> f c, f b -> f c)
 

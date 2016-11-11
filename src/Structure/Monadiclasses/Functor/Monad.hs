@@ -8,7 +8,7 @@ module Structure.Monadiclasses.Functor.Monad (
     Monad(..)
 ) where
     import Structure.Function
-    import Structure.Unit
+    import Structure.Commutative
     import Structure.Monadiclasses.Wrapper
     import Structure.Monadiclasses.Functor
 
@@ -19,7 +19,7 @@ module Structure.Monadiclasses.Functor.Monad (
         lift2 :: (a -> b -> c) -> f a -> f b -> f c
         lift2 f x y = fmap f x `fapp` y
 
-        cift2 :: (And t0, And t1) => (t0 a b -> c) -> t1 (f a) (f b) -> f c
+        cift2 :: (Diproduct t0, Diproduct t1) => (t0 a b -> c) -> t1 (f a) (f b) -> f c
         cift2 = uncurry . lift2 . curry
 
     class (Apply f) => Bind f where

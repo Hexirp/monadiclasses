@@ -123,6 +123,7 @@ WrapperとUnwrapperを合わせたのがIdentity、ConquerとUnquerを合わせ�
 
 Divisible則(contravariant-1.4から引用):
 ```haskell
+    delta a = (a, a)
     divide delta m conquer = m
     divide delta conquer m = m
     divide delta (divide delta m n) o = divide delta m (divide delta n o)

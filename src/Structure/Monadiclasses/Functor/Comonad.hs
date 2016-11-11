@@ -8,12 +8,12 @@ module Structure.Monadiclasses.Functor.Comonad (
     Comonad(..)
 ) where
     import Structure.Function
-    import Structure.Unit
+    import Structure.Commutative
     import Structure.Monadiclasses.Wrapper
     import Structure.Monadiclasses.Functor
 
     class (Functor f) => Coapply f where
-        cict2 :: (Or t0, Or t1) => (t0 a b -> c) -> t1 (f a) (f b) -> f c
+        cict2 :: (Disum t0, Disum t1) => (t0 a b -> c) -> t1 (f a) (f b) -> f c
         cict2 = undefined
 
     class (Coapply f) => Extend f where
