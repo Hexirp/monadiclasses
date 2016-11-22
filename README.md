@@ -7,7 +7,7 @@ __My English level ability isn't native level, so I write almost all the comment
     私の英語能力はネイティブレベルではないため、私は日本語でこの解説を書きます。しかし、このパッケージは単純なので、あなたはそれを理解できます。
 -->
 
-これはMonadに関係する全ての型クラスを実装する事を目的とし、型クラスに関する辞書としても機能させたいと思っています。このパッケージは欲望から生まれました。
+これはMonadに関係する全ての型クラスを実装する事を目的とし、型クラスに関する辞書としても機能させたいと思っています。このパッケージは欲望から生まれ、メモ的な使い方をされています。
 
 
 Future
@@ -29,6 +29,7 @@ Description
 
 これはFunctorよりも制約が弱い型クラスです。名前は「不変」を意味します。注意として、`fmap`や`contra`と対応するのは`xmap`ではなく`invar`です。`invar`だけでは制約が弱すぎて`const id`とすることで任意の型に対して実装することが可能であり、それはこの型クラスの意味に反するため`xmap`が含まれています。
 
+invariant則:
 ```haskell
     xmap id id               === id
     xmap (f1 . f2) (g1 . g2) === xmap f1 g2 . xmap f2 g1
@@ -37,22 +38,24 @@ Description
 下はインスタンスとなる型の例です。これがFunctorとContravariantではないことに注意してください。
 
 ```haskell
-    data Sample a = Ex (a -> a)
+    data Endo a = Endo (a -> a)
 
     instance Invariant Sample where
-        xmap f g (Ex x) = Ex $ g . x . f
+        xmap f g (Endo x) = Endo $ g . x . f
 ```
 
 #### Functor
 
-皆さんはもう知っていると思いますが、Functorは中身の値、または生み出す値に適用する事が出来る型の抽象化です。法則はInvariantがこのパッケージに含まれることにより、単純にすることが出来ます。
+皆さんはもう知っていると思いますが、Functorは中身の値、または生み出す値に適用する事が出来る型の抽象化です。法則はInvariantがこのパッケージに含まれることにより、次のように単純になります。
 
+functor則:
 ```haskell
     fmap f === xmap f undefined
 ```
 
 #### Contravariant
 
+contravarinat則:
 ```haskell
     contra id      === id
     contra (f . g) === contra g . contra f
@@ -112,6 +115,11 @@ WrapperとUnwrapperを合わせたのがIdentity、ConquerとUnquerを合わせ�
 ### Monad
 
 このパッケージはMonadに近い位置にある型クラスを含みます。これらの大きな特徴はApplicativeとMonadから「関数の適用」を実装する部分が分離されていることです。
+
+Pointed則:
+```haskell
+    fmap f . wrap === wrap . f
+```
 
 ### Comonad
 

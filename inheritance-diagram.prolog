@@ -2,7 +2,7 @@
 
 /* nullitypeはカインド(*)を持つ全ての型です。unitypeはカインド(* -> *)を持つ全ての型です。以下、dutype、tritypeと続きます。 */
 
-/* Non Source Code */
+/* Type classes not in the source code */
 
 ex(type, unitype).
 
@@ -96,6 +96,18 @@ ex(codivide, codivisible).
 
 ex(dutype, semigroupoid).
 
+/* Commutative */
+
+ex(dutype, commutative).
+
+ex(dutype, disum).
+
+ex(dutype, diproduct).
+
+/* Unit */
+
+ex(nullitype, unit).
+
 /* ソースコードに含まれない関係 */
 
 /* 圏論における余の関係 */
@@ -128,6 +140,8 @@ contra(unwrapper, unquer).
 contra(coapply, codivide).
 contra(copointed, untrapointed).
 contra(extract, codivisible).
+
+contra(disum, diproduct).
 
 /* 同値関係 */
 eq(unitype, unquer).

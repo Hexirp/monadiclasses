@@ -21,14 +21,28 @@ extra-source-files:  README.md, LICENSE
 cabal-version:       >=1.10
 
 library
-  exposed-modules:     Structure.Unit, Structure.Commutative, Structure.Function, 
-                       Structure.Monadiclasses.Wrapper, Structure.Monadiclasses.Conquer, 
-                       Structure.Monadiclasses.Functor, Structure.Monadiclasses.Functor.Monad, Structure.Monadiclasses.Functor.Comonad, 
-                       Structure.Monadiclasses.Contravariant.Divide, Structure.Monadiclasses.Contravariant.Codivide, 
-                       Structure.Categories.Semigroupoid, Structure.Monadiclasses, 
-                       Structure.Monadiclasses.Minimal.Functor, Structure.Monadiclasses.Minimal
+  exposed-modules:     Structure.Categories.Semigroupoid, 
+                       Structure.Commutative, 
+                       Structure.Function, 
+                       Structure.Monadiclasses, 
+                       Structure.Unit, 
+                       Structure.Monadiclasses.Contravariant.Codivide, 
+                       Structure.Monadiclasses.Contravariant.Divide, 
+                       Structure.Monadiclasses.Conquer, 
+                       Structure.Monadiclasses.Functor, 
+                       Structure.Monadiclasses.Functor.Comonad, 
+                       Structure.Monadiclasses.Functor.Monad, 
+                       Structure.Monadiclasses.Functor.Monad.Continuation, 
+                       Structure.Monadiclasses.Functor.Monad.Failure, 
+                       Structure.Monadiclasses.Wrapper, 
+                       Structure.Monadiclasses.Minimal.Functor, 
+                       Structure.Monadiclasses.Minimal.Comonad
   -- other-modules:       
   other-extensions:    NoImplicitPrelude
-  build-depends:       base >= 4.8
+  build-depends:       base (>= 4.8)
   hs-source-dirs:      src, mini
   default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/Hexirp/monadiclasses
