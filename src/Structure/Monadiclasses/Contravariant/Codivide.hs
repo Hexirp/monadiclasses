@@ -11,7 +11,7 @@ module Structure.Monadiclasses.Contravariant.Codivide (
     import Structure.Monadiclasses.Functor
 
     class (Contravariant f) => Codivide f where
-        codivide :: (Disum t0, Disum t1) => (t0 a b -> c) -> (f c -> t1 (f a) (f b))
+        codivide :: (Disum t) => (c -> t a b) -> (t (f a) (f b) -> f c)
         codivide = undefined
 
     class (Unquer f, Contravariant f) => Untrapointed f where

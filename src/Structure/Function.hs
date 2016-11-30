@@ -22,3 +22,6 @@ module Structure.Function where
 
     copy :: (a -> a -> b) -> a -> b
     copy = \f -> \a -> f a a
+
+    flip :: (a -> b -> c) -> b -> a -> c
+    flip f x y = f y x

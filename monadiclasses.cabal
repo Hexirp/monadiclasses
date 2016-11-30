@@ -23,6 +23,7 @@ cabal-version:       >=1.10
 library
   exposed-modules:     Structure.Categories.Semigroupoid, 
                        Structure.Commutative, 
+                       Structure.Data.Predicate
                        Structure.Function, 
                        Structure.Monadiclasses, 
                        Structure.Unit, 

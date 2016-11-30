@@ -13,7 +13,7 @@ module Structure.Monadiclasses.Functor.Comonad (
     import Structure.Monadiclasses.Functor
 
     class (Functor f) => Coapply f where
-        cict2 :: (Disum t0, Disum t1) => (t0 a b -> c) -> t1 (f a) (f b) -> f c
+        cict2 :: (Disum t) => (t a b -> c) -> t (f a) (f b) -> f c
         cict2 = undefined
 
     class (Coapply f) => Extend f where
