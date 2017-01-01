@@ -1,26 +1,12 @@
 monadiclasses
 ====
 
-__My English level ability isn't native level, so I write almost all the commentary in Japanese. However, this package is simple and therefore you can understand it.__
-
-<!--
-    私の英語能力はネイティブレベルではないため、私は日本語でこの解説を書きます。しかし、このパッケージは単純なので、あなたはそれを理解できます。
--->
-
-これはMonadに関係する全ての型クラスを実装する事を目的とし、型クラスに関する辞書としても機能させたいと思っています。このパッケージは欲望から生まれ、メモ的な使い方をされています。
-
-
-Future
-----
-
-* You can use the "Minimal" modules when you define a monad. You can define all type classes needed to define the Monad just by defining the 3 kinds of function. / あなたがMonadを定義する時、Minimalモジュールを使えます。あなたが3種の関数を定義するだけで、あなたはMonadを定義するのに必要な全ての型クラスを定義できます。
-
+これはMonadに関係する全ての型クラスのメモです。
 
 Description
 ----
 
-これらはパッケージの型クラスの解説です。
-
+これらはパッケージの型クラスの内容のメモです。
 ### Functor
 
 このパッケージはFunctorに近しい関係にある型クラスを含みます。
@@ -144,33 +130,6 @@ Divisible則(contravariant-1.4から引用):
 ### Minimal
 
 これらのクラスは最小のコード量での型クラス定義を提供します。たとえば、Minimalを使用しないと、Monadを使用するために__7個__もの型クラスとたくさんの関数を実装する必要があります。しかし、使えば2個、または3個の関数を実装するだけで済みます。
-
-
-Version
-----
-
-更新履歴をここに記載します。
-
-### 1.0.0.0
-
-このバージョンは最初にコンパイルが成功したバージョンです。
-
-* Add - ライセンス(BSD-3)ファイル
-* Add - README.md
-* Add - cabalファイル
-* Add - stackファイル
-* Add - ソースコード
-    * Add - Functor、Wrapper、Conquerに関する型クラス
-    * Add - Monad、Comonad、Divide、Codivideに関する型クラス
-    * Add - 汎用の関数群
-    * Add - `()`、`(,)`、`Either`を抽象化した型クラス
-    * Add - Minimal
-* Add - 継承関係を表すprologソースコード
-
-### 0.0.0.0
-
-このバージョンはパッケージがまだ存在していないバージョンです。
-
 
 [1]:https://hackage.haskell.org/package/contravariant-1.4
 [2]:https://github.com/scalaz/scalaz
