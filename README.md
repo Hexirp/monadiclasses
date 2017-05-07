@@ -1,6 +1,8 @@
 monadiclasses
 ====
 
+**このリポジトリは放棄されました。**
+
 これはMonadに関係する全ての型クラスのメモです。
 
 Description
